@@ -6,6 +6,7 @@ import 'package:movies/features/movies/domain/repository/base_movies_repository.
 class GetNowPlayingUseCase {
   final BaseMoviesRepository baseMoviesRepository;
   GetNowPlayingUseCase(this.baseMoviesRepository);
+
   Future<Either<Failure, List<MovieEntity>>> execute() async{
     return await baseMoviesRepository.getNowPlayingMovies();
   }
