@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies/core/services/service_locator.dart';
+import 'package:movies/core/utils/app_string.dart';
 import 'package:movies/features/movies/presentation/screens/movies_screen.dart';
 
 void main() {
@@ -11,10 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: AppString.appName,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: Colors.grey.shade900,
       ),
-      home: MoviesScreen(),
+      home: const MoviesScreen(),
     );
   }
 }
